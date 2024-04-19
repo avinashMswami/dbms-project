@@ -1,0 +1,17 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+
+datasource db {
+  provider = "postgresql"
+  url      = "postgresql://postgres:avinash@localhost:5432/postgres?schema=employee_data"
+}
+
+
+model emp_data{
+    id Int  @id @default(autoincrement())
+    name String @db.VarChar(255)
+    hourly_pay Float
+    salary Float?
+}
